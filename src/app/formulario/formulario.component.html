@@ -1,0 +1,154 @@
+
+<div class="container-fluid">
+
+    <div class="container">
+      <!-- Title -->
+      <div class="d-flex justify-content-between align-items-lg-center py-3 flex-column flex-lg-row">
+        <h2 class="h5 mb-3 mb-lg-0"><a href="../../pages/admin/customers.html" class="text-muted"><i class="bi bi-arrow-left-square me-2"></i></a>Realizar un pedido</h2>
+        <div class="hstack gap-3">
+          <button class="btn btn-primary btn-sm btn-icon-text"> <span class="text"><a href="home"> <h5 style="color: white">Confirmar pedido</h5></a></span></button>
+        </div>
+      </div>
+    
+      <!-- Main content -->
+      <div class="row">
+        <!-- Left side -->
+        <div class="col-lg-8">
+          <!-- Basic information -->
+
+            <div class="card mb-4">
+                <div class="card-body">
+                  <h3 class="h6 mb-4">Información personal *</h3>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="mb-3">
+                        <label class="form-label" >Nombre Completo *</label>
+                        <input type="text" class="form-control" [(ngModel)]="datos.nombre">
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="mb-3">
+                        <label class="form-label">CI *</label>
+                        <input type="text" class="form-control" [(ngModel)]="datos.ci">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="mb-3">
+                        <label class="form-label">Correo *</label>
+                        <input type="email" class="form-control" [(ngModel)]="datos.correo">
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="mb-3">
+                        <label class="form-label">Celular *</label>
+                        <input type="text" class="form-control" [(ngModel)]="datos.celular">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+          <!-- Address -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h3 class="h6 mb-4">Dirección de entrega</h3>
+              <div class="mb-3">
+                <label class="form-label" >Dirección 1 *</label>
+                <input type="text" class="form-control" [(ngModel)]="entrega.dir1">
+              </div>
+              <div class="mb-3">
+                <label class="form-label">Dirección 2 *</label>
+                <input type="text" class="form-control">
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label">Ciudad *</label>
+                    <select [(ngModel)]="entrega.ciudad" class="select2 form-control select2-hidden-accessible" data-select2-placeholder="Select country" data-select2-id="select2-data-1-gy14" tabindex="-1" aria-hidden="true">
+                      <option data-select2-id="select2-data-3-ibs9"></option>
+                      <option value="LP">La Paz</option>
+                      <option value="CBBA">Cochabamba</option>
+                      <option value="SC">Santa Cruz</option>
+                      <option value="BN">Beni</option>
+                      <option value="OR">Oruro</option>
+                      <option value="TJ">Tarija</option>
+                    </select><span class="select2 select2-container select2-container--bootstrap-5" dir="ltr" data-select2-id="select2-data-2-46y9" style="width: 391px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-vp8l-container" aria-controls="select2-vp8l-container"><span class="select2-selection__rendered" id="select2-vp8l-container" role="textbox" aria-readonly="true" title="Select country"><span class="select2-selection__placeholder">Seleccione su ciudad</span></span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row">
+
+                <div class="col-lg-6">
+                  <div class="mb-3">
+                    <label class="form-label"># de casa</label>
+                    <input type="text" class="form-control" [(ngModel)]="entrega.nro">
+                  </div>
+                </div>
+
+                
+
+              </div>
+              <div class="col-lg-6">
+                <div class="mb-3">
+                  <label class="form-label">Referencias</label>
+                  <input type="text" class="form-control">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Right side -->
+        <div class="col-lg-4">
+          <!-- Status -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h3 class="h6">Producto a comprar</h3>
+              <select  [(ngModel)]="order.product" class="form-select">
+                <option value="p1">Motocicleta a100-1</option>
+                <option value="p2">Motocicleta b100-1</option>
+                <option value="p3">Motocicleta c100-1</option>
+                <option value="p4">Motocicleta d100-1</option>
+                <option value="p5">Motocicleta a200-1</option>
+                <option value="p6">Motocicleta b200-1</option>
+                <option value="p7">Motocicleta c200-1</option>
+                <option value="p8">Motocicleta d200-1</option>
+                <option value="p9">Motocicleta a300-1</option>
+                <option value="p10">Casco c99-0</option>
+                <option value="p11">Casco c99-10</option>
+                <option value="p12">Casco c99-110</option>
+
+              </select>
+            </div>
+          </div>
+          <!-- Avatar -->
+
+          <!-- Notes -->
+          <div class="card mb-4">
+            <div class="card-body">
+              <h2 class="h6">Resumen de pedido</h2>
+              <hr>
+                <h3 style="display:inline; font-weight: bold;">Nombre: <h3 style="text-align: right; display:inline;">{{ datos.nombre }}</h3></h3> <br>
+                <h3 style="display:inline; font-weight: bold;">CI: <h3 style="text-align: right; display:inline;">{{ datos.ci }}</h3></h3> <br>
+                <h3 style="display:inline; font-weight: bold;">Correo: <h3 style="text-align: right; display:inline;">{{ datos.correo }}</h3></h3> <br>
+                <h3 style="display:inline; font-weight: bold;">Celular: <h3 style="text-align: right; display:inline;">{{ datos.celular }}</h3></h3> <br>
+                <hr>
+                <h3 style="display:inline; font-weight: bold;">Direccion principal: <h3 style="text-align: right; display:inline;">{{ entrega.dir1 }} {{ entrega.nro }} </h3></h3> <br>
+                <h3 style="display:inline; font-weight: bold;">Ciudad: <h3 style="text-align: right; display:inline;">{{ entrega.ciudad }}</h3></h3> <br>
+                <hr>
+
+                <h3 style="display:inline; font-weight: bold;">Producto: <h3 style="text-align: right; display:inline;">{{ motoModel() }}</h3></h3> <br>
+                <h3 style="display:inline; font-weight: bold;">Precio: <h3 style="text-align: right; display:inline;">${{ calcPrice() }}</h3></h3> <br>
+                <h3 style="display:inline; font-weight: bold;">Descuento: <h3 style="text-align: right; display:inline;">{{ calcDesc() }}%</h3></h3> <br>
+                <hr>    
+                <h3 style="display:inline; font-weight: bold;">Total: <h3 style="text-align: right; display:inline;">${{ calcTotal() }}</h3></h3> <br>
+            </div>
+          </div>
+          <!-- Notification settings -->
+
+        </div>
+      </div>
+    </div>
+    </div>
